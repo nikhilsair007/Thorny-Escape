@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(nbg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100vw;
+    height: 100vh;
+}
+
+.dino{
+    background-image: url(ball.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 7.1rem;
+    height: 7.1rem;
+
+    position: absolute;
+    bottom: 28px;;
+    left: 3.25rem;
+}
+
+.obstacle{
+    width: 6.3rem;
+    height: 6rem;
+    background-image: url(cactus.png);
+    background-size: cover;
+    position: absolute;
+    bottom:34px;
+    left: 46vw;
+}
+
+.ext{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.newGame:hover {
+    cursor: pointer;
+    background-color: rgb(124, 246, 124);
+    font-size: 16px; 
+}
+
+
+.newGame{
+    position: relative;
+    bottom:2rem;
+    height: 40px;
+    width: 250px;
+    font-size: 28px;
+    border: 0px;
+    background-color: rgb(21, 230, 21);
+    color: rgb(254, 255, 253);
+    border-radius: 0.7rem;
+    /* left: 34.375rem; */
+    text-align: center; 
+    font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
+    /* font-family: sans-serif; */
+}
+
+.animateDino{
+    animation: dino 0.6s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+
+
+.title{
+    background-color: rgb(91, 234, 91);
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, .87);
+    font-weight: bold;
+    border: 0px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto; /* Center horizontally */
+    position: absolute;
+    top: 10px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontally */
+    text-align: center; /* Align text center */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.gameOver{
+    position: relative;
+    color: rgb(235, 27, 27);
+    font-size: 5.3rem;
+    top: 200px;
+    text-align: center; 
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+#highScore {
+    background-color: rgba(0, 255, 8, 0.441);
+    font-size: 1.5em;
+    color: #54212f;
+    font-weight: bold;
+    border: 0px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #highScore {
+        font-size: 1em;
+        padding: 8px;
+    }
+}
+
+
+
+#scoreCont {
+    background-color: rgba(0, 255, 8, 0.441);
+    font-size: 1.5em;
+    color: #54212f;
+    font-weight: bold;
+    border: 0px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    position: absolute;
+    top: 110px;
+    right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #scoreCont {
+        font-size: 1em;
+        padding: 8px;
+    }
+}
+
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 17.6rem;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
